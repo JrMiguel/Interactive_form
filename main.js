@@ -235,7 +235,7 @@ var hidePmt = function(){
      }
      
      //Validate the CVV number 
-     if(cvv.value.length != 3){
+     if(cvv.value == "" || isNaN(cvv.value) || cvv.value.length < 3 || cvv.value.length > 3){
          cvv.style.borderColor = "red";
          submitButton.setAttribute("type", "button");
      } else {
